@@ -5,9 +5,13 @@ import React, { useState } from "react";
 import { MdCall } from "react-icons/md";
 import { FaBars } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const pathname = usePathname();
+  const {data} = useSelector((state) => state.user);
+
+  console.log(data)
   const [open, setOpen] = useState(false)
   const navItems = [
     {
@@ -97,13 +101,17 @@ const Navbar = () => {
           </button>
           <h2 className="text-yellow-400 hover:text-white">1-833 711 4606</h2>
         </div>
-        <div className="flex flex-row space-x-3">
+        <div className="flex flex-row space-x-3 items-center">
         <button className="border-2 rounded-md border-yellow-400 hover:border-0 hover:bg-yellow-400 text-yellow-400 hover:text-slate-900 px-2 py-1 uppercase">
           book now pay later
         </button>
-        <button className="border-2 rounded-md border-yellow-400 hover:border-0 hover:bg-yellow-400 text-yellow-400 hover:text-slate-900 px-2 py-1 uppercase">
-          account login
+        {
+          data?.user?.name ? <p className="text-yellow-400">{data?.user?.name}</p> : (
+            <button className="border-2 rounded-md border-yellow-400 hover:border-0 hover:bg-yellow-400 text-yellow-400 hover:text-slate-900 px-2 py-1 uppercase">
+          <Link href={'/signin'}>account login</Link>
         </button>
+          )
+        }
         </div>
       </div>
     </nav>

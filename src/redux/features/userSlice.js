@@ -4,8 +4,8 @@ const initialState = {
     data: {
         token: "",
         user: {
-            email: "testuser@gmail.com",
-            name: "Test User",
+            email: "",
+            name: "",
             category: null,
             email_verified: false
         }
@@ -18,8 +18,17 @@ const initialState = {
 const userSlice = createSlice({
     name: 'user',
     initialState,
-    reducers: {}
+    reducers: {
+        mountUser: (state, {payload}) =>{
+            state.data.token = payload.token
+            state.data.user.email = payload?.email
+            state.data.user.name = payload?.name
+            state.data.user.email_verified = payload?.email_verified
+            
+
+        }
+    }
 })
 
-
+export const {mountUser} = userSlice.actions
 export default userSlice.reducer
