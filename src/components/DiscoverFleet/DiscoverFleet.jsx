@@ -10,7 +10,7 @@ import Button from '../Button/Button';
 
 const DiscoverFleet = () => {
     // const vehicles = await fetchData('http://localhost:3000/api/vehicles')
-    const {data:vehicles, isLoading} = useGetVehiclesQuery();
+    const {data:vehicles=[], isLoading} = useGetVehiclesQuery();
     const [vehicleDetails, setVehicleDetail] = useState(vehicles[0])
     if(isLoading){
         return <Loading/>
