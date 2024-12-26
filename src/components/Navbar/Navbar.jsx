@@ -90,19 +90,21 @@ const Navbar = () => {
         }
         </div>
       </div>
-      <div className="mt-3 md:mt-0 flex flex-col md:flex-row space-y-4  md:space-y-0 md:space-x-4 items-center">
-        <div className="w-full md:w-1/2 flex flex-row justify-end items-center space-x-2">
+      <div className="mt-6 md:mt-0 flex flex-col md:flex-row space-y-4  md:space-y-0 md:space-x-4 items-center">
+        <div className="w-full md:w-1/2 flex flex-row justify-center md:justify-end items-center space-x-2">
           <button className="border-2 rounded-full border-yellow-400 hover:border-0 hover:bg-yellow-400 text-yellow-400 hover:text-slate-900 p-1 uppercase">
             <MdCall />
           </button>
           <h2 className="text-yellow-400 hover:text-white">1-833 711 4606</h2>
         </div>
+        <div className="flex flex-row space-x-3">
         <button className="border-2 rounded-md border-yellow-400 hover:border-0 hover:bg-yellow-400 text-yellow-400 hover:text-slate-900 px-2 py-1 uppercase">
           book now pay later
         </button>
         <button className="border-2 rounded-md border-yellow-400 hover:border-0 hover:bg-yellow-400 text-yellow-400 hover:text-slate-900 px-2 py-1 uppercase">
           account login
         </button>
+        </div>
       </div>
     </nav>
   );
