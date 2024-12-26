@@ -1,3 +1,4 @@
+import DiscoverFleet from "@/components/DiscoverFleet/DiscoverFleet";
 import Header from "@/components/Header/Header";
 import Navbar from "@/components/Navbar/Navbar";
 import QuickPriceCheck from "@/components/QuickPriceCheck/QuickPriceCheck";
@@ -9,6 +10,7 @@ export default function Home() {
       <Navbar/>
       <Header/>
       <QuickPriceCheck/>
+      <DiscoverFleet/>
     </main>
   );
 }

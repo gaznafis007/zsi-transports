@@ -3,10 +3,11 @@ import Title from '../Title/Title';
 import { fetchData } from '@/app/utils/funcs';
 import { FaPlaneDeparture } from "react-icons/fa";
 import { AiOutlineClockCircle } from "react-icons/ai";
+import Button from '../Button/Button';
 
 const QuickPriceCheck = async () => {
     const prices = await fetchData('http://localhost:3000/api/quickPriceCheck');
-    console.log(prices)
+    // console.log(prices)
     return (
         <section className='mt-6 md:mt-12 mx-4 md:mx-8'>
             <Title>quick price check</Title>
@@ -26,6 +27,16 @@ const QuickPriceCheck = async () => {
                         </div>
                     ))
                 }
+            </div>
+            <div className='mt-8 md:mt-16'>
+                <h2 className="text-6xl text-center uppercase">RPC limo nationwide</h2>
+                <p className="mt-4 text-2xl text-center">
+                Headquarters in New York serving multiple cities.
+                </p>
+                <div className="flex flex-col md:flex-row gap-3 justify-center mt-6">
+                    <Button>View Price and Book a Ride</Button>
+                    <Button>View Price and Book a Ride</Button>
+                </div>
             </div>
         </section>
     );

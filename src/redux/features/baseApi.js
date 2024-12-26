@@ -4,10 +4,10 @@ export const baseApi = createApi({
     reducerPath: 'baseApi',
     baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:3000'}),
     endpoints: (builder) =>({
-        getQuickPrices: builder.query({
-            query: () => '/api/quickPriceCheck'
+        getVehicles: builder.query({
+            query: () => '/api/vehicles'
         })
     })
 })
 
-export const {useGetQuickPricesQuery} = baseApi
+export const {useGetVehiclesQuery} = baseApi
