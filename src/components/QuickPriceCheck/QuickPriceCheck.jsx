@@ -7,29 +7,29 @@ import Button from '../Button/Button';
 
 
 const QuickPriceCheck = async () => {
-    // const prices = await fetchData('http://localhost:3000/api/quickPriceCheck');
-    const prices = [
-        {
-            id: 1,
-            title: 'hourly rate',
-            minPrice: 60,
-        },
-        {
-            id: 2,
-            title: 'lga airport',
-            minPrice: 80,
-        },
-        {
-            id: 3,
-            title: 'jfk airport',
-            minPrice: 90,
-        },
-        {
-            id: 4,
-            title: 'ewr airport',
-            minPrice: 100,
-        },
-    ]
+    const prices = await fetchData('https://zsi-transports.vercel.app/api/quickPriceCheck');
+    // const prices = [
+    //     {
+    //         id: 1,
+    //         title: 'hourly rate',
+    //         minPrice: 60,
+    //     },
+    //     {
+    //         id: 2,
+    //         title: 'lga airport',
+    //         minPrice: 80,
+    //     },
+    //     {
+    //         id: 3,
+    //         title: 'jfk airport',
+    //         minPrice: 90,
+    //     },
+    //     {
+    //         id: 4,
+    //         title: 'ewr airport',
+    //         minPrice: 100,
+    //     },
+    // ]
     // console.log(prices)
     return (
         <section className='mt-6 md:mt-12 mx-4 md:mx-8'>

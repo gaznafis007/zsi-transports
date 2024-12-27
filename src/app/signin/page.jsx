@@ -43,7 +43,7 @@ const SignIn = () => {
                 </div>
                 <div className="flex flex-col space-y-4">
                     <label className='text-slate-900 mt-8 font-semibold'>Password</label>
-                    <input {...register('password', {required: true})} type="text" placeholder='Password' className="border border-slate-900 px-4 py-2" />
+                    <input {...register('password', {required: true})} type="password" placeholder='Password' className="border border-slate-900 px-4 py-2" />
                     {errors?.password && <p className='my-2 text-red-500'>Please enter password correctly</p>}
                 </div>
                 <input type="submit" disabled={isLoading ? true : false} value={isLoading ? 'Loading....' : 'Submit'} className='px-4 py-2 bg-yellow-400 text-slate-900 hover:text-yellow-400 mt-8 hover:bg-slate-900' />
